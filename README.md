@@ -2,7 +2,7 @@
 
 JSON rendering and data exploration utility.
 
-[![Build Status](https://travis-ci.org/r24y/jsontool.svg?branch=develop)](https://travis-ci.org/r24y/jsontool)
+[![Build Status](https://travis-ci.org/r24y/data-explorer.svg?branch=develop)](https://travis-ci.org/r24y/data-explorer)
 
 > This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
