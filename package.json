@@ -28,9 +28,11 @@
           "release": "patch"
         }
       ]
-    }
+    },
+    "getLastRelease": "./config/get-last-release"
   },
   "devDependencies": {
+    "@semantic-release/last-release-npm": "^2.0.2",
     "@storybook/react": "^3.2.12",
     "conventional-changelog-eslint": "^0.2.0",
     "semantic-release": "^8.0.3"
