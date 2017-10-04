@@ -1,5 +1,5 @@
 {
-  "name": "jsontool",
+  "name": "data-explorer",
   "repository": "https://github.com/r24y/jsontool.git",
   "version": "0.0.0-development",
   "private": true,
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@storybook/react": "^3.2.12",
+    "conventional-changelog-eslint": "^0.2.0",
     "semantic-release": "^8.0.3"
   }
 }
