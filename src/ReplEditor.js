@@ -4,8 +4,8 @@ import MonacoEditor from 'react-monaco-editor';
 const REQUIRE_CONFIG = {
   url: 'https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.1/require.min.js',
   paths: {
-    'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.0/min/vs'
-  }
+    'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.0/min/vs',
+  },
 };
 
 const editorOptions = {
