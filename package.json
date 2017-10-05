@@ -5,6 +5,8 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
+    "babel-generator": "^6.26.0",
+    "babel-types": "^6.26.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-monaco-editor": "^0.10.1",
@@ -33,10 +35,13 @@
     "getLastRelease": "./config/get-last-release"
   },
   "devDependencies": {
-    "@semantic-release/last-release-npm": "^2.0.2",
-    "@storybook/react": "^3.2.12",
-    "conventional-changelog-eslint": "^0.2.0",
-    "eslint-config-react-app": "^2.0.1",
-    "semantic-release": "^8.0.3"
+    "@semantic-release/last-release-npm": "2.0.x",
+    "@storybook/react": "3.2.x",
+    "@types/babel-core": "6.25.x",
+    "@types/babel-traverse": "6.25.x",
+    "@types/babylon": "6.16.x",
+    "conventional-changelog-eslint": "0.2.x",
+    "eslint-config-react-app": "2.0.x",
+    "semantic-release": "8.0.x"
   }
 }
