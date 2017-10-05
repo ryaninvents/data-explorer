@@ -10,8 +10,18 @@ node_js:
   - '6'
 before_script:
   - npm prune
+script:
+  - npm test
+  - npm build
 after_success:
   - npm run semantic-release
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  local_dir: build
+  on:
+    branch: develop
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/

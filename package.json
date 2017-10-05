@@ -4,6 +4,7 @@
   "version": "0.0.0-development",
   "private": true,
   "license": "MIT",
+  "homepage": "https://r24y.github.io/data-explorer",
   "dependencies": {
     "babel-generator": "^6.26.0",
     "babel-types": "^6.26.0",
