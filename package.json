@@ -15,11 +15,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "build": "react-scripts build && lerna run build",
+    "test": "react-scripts test --env=jsdom && lerna run test",
     "eject": "react-scripts eject",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "storybook": "start-storybook -p 9001 -c stories"
+    "semantic-release": "semantic-release pre && npm run build && npm publish && semantic-release post",
+    "storybook": "start-storybook -p 9001 -c stories",
+    "postinstall": "lerna bootstrap"
   },
   "release": {
     "branch": "develop",
