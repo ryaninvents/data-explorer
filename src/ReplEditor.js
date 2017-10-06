@@ -9,6 +9,7 @@ const REQUIRE_CONFIG = {
 };
 
 const editorOptions = {
+  folding: true,
   selectOnLineNumbers: true,
   scrollBeyondLastLine: false,
   lineNumbers: false,
