@@ -13,5 +13,5 @@ module.exports = (pluginConfig, config, callback) => {
             return;
         }
         callback(err, data);
-    })
-}
+    });
+};
