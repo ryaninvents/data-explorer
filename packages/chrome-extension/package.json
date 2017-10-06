@@ -12,24 +12,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
-  },
-  "release": {
-    "branch": "develop",
-    "analyzeCommits": {
-      "preset": "eslint",
-      "releaseRules": [
-        {
-          "tag": "Docs",
-          "scope": "README",
-          "release": "patch"
-        }
-      ]
-    },
-    "getLastRelease": "../../config/get-last-release"
-  },
-  "devDependencies": {
-    "semantic-release": "^8.0.3"
+    "eject": "react-scripts eject"
   }
 }
