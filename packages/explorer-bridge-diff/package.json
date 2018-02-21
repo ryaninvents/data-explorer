@@ -1,12 +1,15 @@
 {
   "name": "explorer-bridge-diff",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Bridge for inspecting changes in a JSON structure",
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
     "test": "echo 'No tests'"
   },
+  "files": [
+    "dist/**"
+  ],
   "author": "Ryan Kennedy <r24y@users.noreply.github.com>",
   "license": "MIT",
   "devDependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "explorer-bridge-json",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Bridge for inspecting a JSON structure",
   "main": "dist/index.js",
   "repository": "https://github.com/r24y/data-explorer/tree/develop/packages/explorer-bridge-json",
@@ -8,6 +8,9 @@
     "build": "babel src --out-dir dist",
     "test": "jest"
   },
+  "files": [
+    "dist/**"
+  ],
   "author": "Ryan Kennedy <r24y@users.noreply.github.com>",
   "license": "MIT",
   "devDependencies": {
