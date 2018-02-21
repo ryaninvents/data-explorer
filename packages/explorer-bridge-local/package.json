@@ -1,0 +1,30 @@
+{
+  "name": "explorer-bridge-local",
+  "version": "0.0.0",
+  "description": "Bridge for inspecting values from the same JavaScript runtime as the visualization",
+  "main": "dist/index.js",
+  "repository": "https://github.com/r24y/data-explorer/tree/develop/packages/explorer-bridge-local",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "test": "jest"
+  },
+  "files": [
+    "dist/**"
+  ],
+  "author": "Ryan Kennedy <r24y@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@r24y/data-explorer-constants": "file:../data-explorer-constants",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "chai-jest-diff": "^1.0.2",
+    "jest": "^22.4.0",
+    "lodash": "^4.17.5",
+    "uuid-base62": "^0.1.0"
+  },
+  "dependencies": {}
+}
