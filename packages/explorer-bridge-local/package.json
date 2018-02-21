@@ -1,6 +1,6 @@
 {
   "name": "explorer-bridge-local",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Bridge for inspecting values from the same JavaScript runtime as the visualization",
   "main": "dist/index.js",
   "repository": "https://github.com/r24y/data-explorer/tree/develop/packages/explorer-bridge-local",
@@ -26,5 +26,7 @@
     "lodash": "^4.17.5",
     "uuid-base62": "^0.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@r24y/data-explorer-constants": "0.0.x"
+  }
 }
