@@ -1,0 +1,21 @@
+{
+  "name": "explorer-bridge-diff",
+  "version": "0.0.0",
+  "description": "Bridge for inspecting changes in a JSON structure",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "test": "echo 'No tests'"
+  },
+  "author": "Ryan Kennedy <r24y@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "dependencies": {
+    "@r24y/data-explorer-constants": "file:../data-explorer-constants"
+  }
+}
