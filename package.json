@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9001 -c stories",
     "postinstall": "lerna bootstrap",
-    "publish:all": "npx travis-deploy-once 'lerna publish --skip-git --conventional-commits --changelog-preset eslint'"
+    "publish:all": "npx travis-deploy-once 'lerna publish --yes --skip-git --conventional-commits --changelog-preset eslint'"
   },
   "devDependencies": {
     "@storybook/react": "3.2.x",
