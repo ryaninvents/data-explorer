@@ -12,6 +12,7 @@ script:
   - npm test
   - npm run build
 after_success:
+  - git pull --rebase
   - npm run publish:all
 branches:
   except:
