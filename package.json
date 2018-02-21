@@ -19,7 +19,7 @@
     "test": "react-scripts test --env=jsdom && lerna run test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9001 -c stories",
-    "postinstall": "lerna bootstrap",
+    "postinstall": "lerna bootstrap && lerna link --force-local",
     "publish:all": "npx travis-deploy-once 'lerna publish --skip-git --yes --conventional-commits --changelog-preset eslint'"
   },
   "devDependencies": {
