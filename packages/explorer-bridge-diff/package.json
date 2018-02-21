@@ -10,12 +10,13 @@
   "author": "Ryan Kennedy <r24y@users.noreply.github.com>",
   "license": "MIT",
   "devDependencies": {
+    "@r24y/data-explorer-constants": "file:../data-explorer-constants",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1"
   },
   "dependencies": {
-    "@r24y/data-explorer-constants": "file:../data-explorer-constants"
+    "@r24y/data-explorer-constants": "0.0.x"
   }
 }
