@@ -18,33 +18,17 @@
     "build": "react-scripts build && lerna run build",
     "test": "react-scripts test --env=jsdom && lerna run test",
     "eject": "react-scripts eject",
-    "semantic-release": "semantic-release pre && npm run build && npm publish && semantic-release post",
     "storybook": "start-storybook -p 9001 -c stories",
-    "postinstall": "lerna bootstrap"
-  },
-  "release": {
-    "branch": "develop",
-    "analyzeCommits": {
-      "preset": "eslint",
-      "releaseRules": [
-        {
-          "tag": "Docs",
-          "scope": "README",
-          "release": "patch"
-        }
-      ]
-    },
-    "getLastRelease": "./config/get-last-release"
+    "postinstall": "lerna bootstrap",
+    "publish:all": "lerna publish --conventional-commits --changelog-preset eslint"
   },
   "devDependencies": {
-    "@semantic-release/last-release-npm": "2.0.x",
     "@storybook/react": "3.2.x",
     "@types/babel-core": "6.25.x",
     "@types/babel-traverse": "6.25.x",
     "@types/babylon": "6.16.x",
     "conventional-changelog-eslint": "0.2.x",
     "eslint-config-react-app": "2.0.x",
-    "lerna": "^2.4.0",
-    "semantic-release": "8.0.x"
+    "lerna": "^2.4.0"
   }
 }

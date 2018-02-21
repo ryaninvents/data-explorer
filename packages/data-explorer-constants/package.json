@@ -1,6 +1,6 @@
 {
   "name": "@r24y/data-explorer-constants",
-  "version": "0.0.0-semantically-versioned",
+  "version": "0.0.0-semantically-released",
   "description": "Common constants used in data-explorer",
   "main": "index.js",
   "scripts": {
@@ -8,19 +8,5 @@
   },
   "author": "Ryan Kennedy <r24y@users.noreply.github.com>",
   "license": "MIT",
-  "release": {
-    "monorepo": {
-      "branch": "develop",
-      "analyzeCommits": {
-        "preset": "eslint",
-        "releaseRules": [
-          {
-            "tag": "Docs",
-            "scope": "README",
-            "release": "patch"
-          }
-        ]
-      }
-    }
-  }
+  "devDependencies": {}
 }
