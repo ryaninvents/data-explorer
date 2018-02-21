@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo 'No tests'"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Ryan Kennedy <r24y@users.noreply.github.com>",
   "license": "MIT",
   "devDependencies": {}
