@@ -29,6 +29,6 @@
     "@types/babylon": "6.16.x",
     "conventional-changelog-eslint": "0.2.x",
     "eslint-config-react-app": "2.0.x",
-    "lerna": "^2.4.0"
+    "lerna": "^2.9.0"
   }
 }
