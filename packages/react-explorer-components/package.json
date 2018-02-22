@@ -1,6 +1,6 @@
 {
   "name": "react-explorer-components",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "React components for rendering devtools-style depictions of JS values",
   "main": "dist/index.js",
   "repository": "https://github.com/r24y/data-explorer/tree/develop/packages/react-explorer-components",
@@ -23,6 +23,7 @@
     "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",
     "chai-jest-diff": "^1.0.2",
+    "color": "^3.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.4.0",
@@ -35,7 +36,8 @@
     "@fortawesome/react-fontawesome": "0.0.17",
     "emotion": "^9.0.1",
     "prop-types": "^15.6.0",
-    "react-emotion": "^9.0.1"
+    "react-emotion": "^9.0.1",
+    "recompose": "^0.26.0"
   },
   "peerDependencies": {
     "react": "^16.2.0"
