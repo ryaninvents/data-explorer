@@ -16,6 +16,8 @@ script:
 after_success:
   - git pull --rebase
   - npm run publish:all
+  - npm run storybook:build
+  - npm run deploy
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
