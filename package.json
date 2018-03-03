@@ -18,17 +18,24 @@
     "build": "react-scripts build && lerna run build",
     "test": "react-scripts test --env=jsdom && lerna run test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9001 -c stories",
+    "storybook": "start-storybook -c .storybook/dev -p 9009",
+    "storybook:build": "build-storybook -c .storybook/prod -o dist/storybook",
+    "deploy": "gh-pages -d dist",
     "postinstall": "lerna bootstrap && lerna link --force-local",
     "publish:all": "npx travis-deploy-once 'lerna publish --skip-git --yes --conventional-commits --changelog-preset eslint'"
   },
   "devDependencies": {
-    "@storybook/react": "3.2.x",
+    "@storybook/addon-knobs": "^3.3.14",
+    "@storybook/react": "^3.2.19",
     "@types/babel-core": "6.25.x",
     "@types/babel-traverse": "6.25.x",
     "@types/babylon": "6.16.x",
+    "babel-plugin-macros": "^2.1.0",
     "conventional-changelog-eslint": "0.2.x",
+    "emotion": "^9.0.1",
     "eslint-config-react-app": "2.0.x",
+    "gh-pages": "^1.1.0",
+    "import-all.macro": "^2.0.3",
     "lerna": "^2.9.0"
   }
 }
