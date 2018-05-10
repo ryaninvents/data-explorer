@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import makeAbortable, {AbortController} from '@r24y/make-abortable';
+import makeAbortable from 'make-abortable';
+import AbortController from 'abort-controller';
 
 /**
  * Render-prop component which loads values for the specified properties.
@@ -97,13 +98,15 @@ export default class WithProperties extends React.Component {
       if (!matchingDescriptor) return;
 
       this.pendingPropFetches.add(propName);
+      this.abortController.abort();
+      this.abortController = new AbortController();
 
       // Aborting the promise is an easy way to avoid certain edge cases,
       // such as when a promise returns after unmount, or after the
       // `identifier` has changed.
       makeAbortable(
         runtimeBridge.getPropertyValue(identifier, matchingDescriptor),
-        this.abortController
+        {signal: this.abortController.signal}
       ).then((value) => {
         this.propValues.set(propName, value);
         this.pendingPropFetches.delete(propName);
@@ -112,7 +115,7 @@ export default class WithProperties extends React.Component {
       }).catch((err) => {
         this.pendingPropFetches.delete(propName);
 
-        if (err.message !== 'Aborted') {
+        if (err.name !== 'AbortError') {
           this.propErrors.set(propName, err);
         }
 
