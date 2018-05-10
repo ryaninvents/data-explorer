@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import makeAbortable from 'make-abortable';
 import AbortController from 'abort-controller';
+import {connect} from './InspectorContext';
 
 /**
  * Render-prop component which loads values for the specified properties.
@@ -21,7 +22,7 @@ import AbortController from 'abort-controller';
  *       )}
  *     </WithProperties>
  */
-export default class WithProperties extends React.Component {
+export class WithProperties extends React.Component {
   static propTypes = {
     /** Value identifier as returned by the runtime bridge. */
     identifier: PropTypes.any,
@@ -139,3 +140,5 @@ export default class WithProperties extends React.Component {
     return this.props.children(this.valuesInterface);
   }
 }
+
+export default connect(WithProperties);

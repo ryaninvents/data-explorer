@@ -108,4 +108,16 @@ export default {
       fontWeight: 'bold',
     }),
   },
+  Layout: {
+    PreviewRow: css({
+      label: 'Layout--PreviewRow',
+      flex: '0 0',
+      display: 'flex column',
+      paddingLeft: '1.5ch',
+    }),
+    PreviewSummary: css({
+      label: 'Layout--PreviewSummary',
+      marginLeft: '-1.5ch',
+    }),
+  },
 };

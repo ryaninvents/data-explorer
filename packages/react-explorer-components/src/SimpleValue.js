@@ -15,9 +15,12 @@ const classnamesByType = {
 };
 
 export function SimpleValue(props) {
-  const {type, children, className, ...rest} = props;
+  const {type, children, className, diff, ...rest} = props;
   const theme = getTheme(props);
-  const style = theme.Syntax[classnamesByType[type]];
+  let style = theme.Syntax[classnamesByType[type]];
+  if (diff) {
+    style = cx(style, diff);
+  }
   return (
     <span className={cx(theme.Base, className, style)} {...rest}>{children}</span>
   );

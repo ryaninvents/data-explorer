@@ -2,3 +2,4 @@
 extends: kennship
 rules:
   react/no-children-prop: off
+  react/jsx-no-bind: off

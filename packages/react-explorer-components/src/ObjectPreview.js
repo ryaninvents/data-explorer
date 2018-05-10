@@ -2,10 +2,10 @@ import React from 'react';
 import SimpleValue from './SimpleValue';
 import {HORIZONTAL_ELLIPSIS} from './constants';
 
-function Attribute({name, separator, children}) {
+function Attribute({name, separator, children, diff, ...props}) {
   return (
-    <SimpleValue>
-      {name ? <SimpleValue type="attributeName">{name}</SimpleValue> : null}
+    <SimpleValue {...props}>
+      {name ? <SimpleValue type="attributeName" diff={diff}>{name}</SimpleValue> : null}
       {(name && children && separator) ? separator : null}
       {children}
     </SimpleValue>

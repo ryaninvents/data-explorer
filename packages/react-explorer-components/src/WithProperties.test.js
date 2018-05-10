@@ -4,7 +4,7 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import {expect} from 'chai';
 import anticipated from 'anticipated-call';
-import WithProperties from './WithProperties';
+import {WithProperties} from './WithProperties';
 
 Enzyme.configure({adapter: new Adapter()});
 
