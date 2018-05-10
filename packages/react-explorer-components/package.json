@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "React components for rendering devtools-style depictions of JS values",
   "main": "dist/index.js",
-  "repository": "https://github.com/r24y/data-explorer/tree/develop/packages/react-explorer-components",
+  "repository": "https://github.com/ryaninvents/data-explorer/tree/develop/packages/react-explorer-components",
   "scripts": {
     "build": "babel src --out-dir dist",
     "storybook": "start-storybook -p 9009",
@@ -12,10 +12,11 @@
   "files": [
     "dist/**"
   ],
-  "author": "Ryan Kennedy <r24y@users.noreply.github.com>",
+  "author": "Ryan Kennedy <ryaninvents@users.noreply.github.com>",
   "license": "MIT",
   "devDependencies": {
     "@storybook/react": "^3.3.14",
+    "anticipated-call": "^1.4.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -34,8 +35,9 @@
     "@fortawesome/fontawesome": "^1.1.3",
     "@fortawesome/fontawesome-free-solid": "^5.0.6",
     "@fortawesome/react-fontawesome": "0.0.17",
-    "@r24y/make-abortable": "0.0.1",
+    "abort-controller": "^1.0.2",
     "emotion": "^9.0.1",
+    "make-abortable": "^1.0.2",
     "prop-types": "^15.6.0",
     "react-emotion": "^9.0.1",
     "recompose": "^0.26.0"

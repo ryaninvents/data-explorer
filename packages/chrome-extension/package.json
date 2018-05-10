@@ -1,6 +1,6 @@
 {
-  "name": "@r24y/data-explorer-chrome-extension",
-  "repository": "https://github.com/r24y/data-explorer.git",
+  "name": "@ryaninvents/data-explorer-chrome-extension",
+  "repository": "https://github.com/ryaninvents/data-explorer.git",
   "version": "0.0.0-semantically-released",
   "private": true,
   "publishConfig": {
