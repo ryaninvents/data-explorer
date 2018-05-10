@@ -5,7 +5,7 @@ import Theme from './themes/default';
 
 storiesOf('react-explorer-components/SimpleValue', module)
   .add('comment', () => <SimpleValue type="comment">{'/* hello world */'}</SimpleValue>)
-  .add('string', () => <SimpleValue type="string">"hello"</SimpleValue>)
+  .add('string', () => <SimpleValue type="string">&quot;hello&quot;</SimpleValue>)
   .add('number', () => <SimpleValue type="number">{Math.PI}</SimpleValue>)
   .add('regexp', () => <SimpleValue type="regexp">/foo+/</SimpleValue>)
   .add('variable', () => <SimpleValue type="variable">SimpleValue</SimpleValue>)
@@ -28,7 +28,7 @@ storiesOf('react-explorer-components/SimpleValue', module)
       <SimpleValue type="tag">SimpleValue</SimpleValue>{' '}
       <SimpleValue type="attributeName">data-attr</SimpleValue>
       =
-      <SimpleValue type="string">"value"</SimpleValue>
+      <SimpleValue type="string">&quot;value&quot;</SimpleValue>
       <SimpleValue type="bracket" children="/>"/>
     </SimpleValue>
   ));
