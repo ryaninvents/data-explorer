@@ -10,7 +10,7 @@
   "files": [
     "dist/**"
   ],
-  "author": "Ryan Kennedy <r24y@users.noreply.github.com>",
+  "author": "Ryan Kennedy <ryaninvents@users.noreply.github.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -19,6 +19,6 @@
     "babel-preset-env": "^1.6.1"
   },
   "dependencies": {
-    "@r24y/data-explorer-constants": "0.0.x"
+    "@ryaninvents/data-explorer-constants": "0.0.x"
   }
 }

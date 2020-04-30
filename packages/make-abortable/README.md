@@ -1,11 +1,11 @@
-# @r24y/make-abortable
+# @ryaninvents/make-abortable
 
 Wrap any Promise to allow you to abort it later.
 
 ## Installation
 
 ```bash
-npm i --save @r24y/make-abortable
+npm i --save @ryaninvents/make-abortable
 ```
 
 ## Usage

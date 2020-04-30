@@ -1,15 +1,15 @@
-import 'babel-polyfill';
-import keyBy from 'lodash/keyBy';
-import get from 'lodash/get';
-import {DiffMarker, JsType} from '@r24y/data-explorer-constants';
-import diffValues from './diffValues';
+import "babel-polyfill";
+import keyBy from "lodash/keyBy";
+import get from "lodash/get";
+import { DiffMarker, JsType } from "@ryaninvents/data-explorer-constants";
+import diffValues from "./diffValues";
 
-const key = (prop, prefix = 'key') => `${prefix}:${prop.name}`;
+const key = (prop, prefix = "key") => `${prefix}:${prop.name}`;
 key.plain = (prop) => key(prop);
-key.added = (prop) => key(prop, 'added');
-key.removed = (prop) => key(prop, 'removed');
+key.added = (prop) => key(prop, "added");
+key.removed = (prop) => key(prop, "removed");
 
-const VALUE_NOT_PRESENT = Symbol('VALUE_NOT_PRESENT');
+const VALUE_NOT_PRESENT = Symbol("VALUE_NOT_PRESENT");
 
 const added = (prop) => ({
   ...prop,
@@ -69,9 +69,11 @@ const shouldDiffRecursively = (left, right) => {
   // TODO: probably want to also test `subtype` and `className`, otherwise
   // display will look a bit wonky. Good enough for PoC though
 
-  if (left.value.type !== JsType.Object || right.value.type !== JsType.Object) return false;
-  const neitherNull = (left.value.subtype !== 'null') && (right.value.subtype !== 'null');
-  const isObject = (left.value.type === JsType.Object);
+  if (left.value.type !== JsType.Object || right.value.type !== JsType.Object)
+    return false;
+  const neitherNull =
+    left.value.subtype !== "null" && right.value.subtype !== "null";
+  const isObject = left.value.type === JsType.Object;
   return neitherNull && isObject;
 };
 
@@ -98,7 +100,7 @@ const shouldDiffRecursively = (left, right) => {
 class DiffRuntimeInterface {
   constructor(src) {
     this.src = src;
-    if (typeof src.isEqual === 'function') {
+    if (typeof src.isEqual === "function") {
       this.isEqual = src.isEqual.bind(src);
     }
   }
@@ -108,8 +110,8 @@ class DiffRuntimeInterface {
   }
 
   async getPropertyValue([leftId, rightId], prop) {
-    const leftProp = get(prop, 'data.leftProperty');
-    const rightProp = get(prop, 'data.rightProperty');
+    const leftProp = get(prop, "data.leftProperty");
+    const rightProp = get(prop, "data.rightProperty");
     const [left, right] = await Promise.all([
       this.src.getPropertyValue(leftId, leftProp),
       this.src.getPropertyValue(rightId, rightProp),
@@ -119,21 +121,34 @@ class DiffRuntimeInterface {
 
   async getPropertiesFromIdentifier([left, right]) {
     const [leftPropsList, rightPropsList] = await Promise.all([
-      left === VALUE_NOT_PRESENT ? Promise.resolve([]) : this.src.getPropertiesFromIdentifier(left),
-      right === VALUE_NOT_PRESENT ? Promise.resolve([]) : this.src.getPropertiesFromIdentifier(right),
+      left === VALUE_NOT_PRESENT
+        ? Promise.resolve([])
+        : this.src.getPropertiesFromIdentifier(left),
+      right === VALUE_NOT_PRESENT
+        ? Promise.resolve([])
+        : this.src.getPropertiesFromIdentifier(right),
     ]);
     const leftProps = keyBy(leftPropsList, key);
     const rightProps = keyBy(rightPropsList, key);
-    const allProps = [...new Set([...leftPropsList.map(key.plain), ...rightPropsList.map(key.plain)])];
+    const allProps = [
+      ...new Set([
+        ...leftPropsList.map(key.plain),
+        ...rightPropsList.map(key.plain),
+      ]),
+    ];
     const resultantPropsByKey = {};
 
     // TODO: perhaps consider renamed/moved properties?
     allProps.forEach((propKey) => {
-      Object.assign(resultantPropsByKey,
-        this.changedProps(leftProps[propKey], rightProps[propKey]));
+      Object.assign(
+        resultantPropsByKey,
+        this.changedProps(leftProps[propKey], rightProps[propKey])
+      );
     });
 
-    return Object.keys(resultantPropsByKey).map((key) => resultantPropsByKey[key]);
+    return Object.keys(resultantPropsByKey).map(
+      (key) => resultantPropsByKey[key]
+    );
   }
 
   changedProps(left, right) {

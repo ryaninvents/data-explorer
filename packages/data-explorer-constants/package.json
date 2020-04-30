@@ -1,5 +1,5 @@
 {
-  "name": "@r24y/data-explorer-constants",
+  "name": "@ryaninvents/data-explorer-constants",
   "version": "0.0.0-semantically-released",
   "description": "Common constants used in data-explorer",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "Ryan Kennedy <r24y@users.noreply.github.com>",
+  "author": "Ryan Kennedy <ryaninvents@users.noreply.github.com>",
   "license": "MIT",
   "devDependencies": {}
 }

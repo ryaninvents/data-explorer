@@ -1,9 +1,9 @@
 {
-  "name": "@r24y/make-abortable",
+  "name": "@ryaninvents/make-abortable",
   "version": "0.0.0",
   "description": "Turn any promise into an abortable promise",
   "main": "dist/index.js",
-  "repository": "https://github.com/r24y/data-explorer/tree/develop/packages/@r24y/make-abortable",
+  "repository": "https://github.com/ryaninvents/data-explorer/tree/develop/packages/@ryaninvents/make-abortable",
   "publishConfig": {
     "access": "public"
   },
@@ -14,7 +14,7 @@
   "files": [
     "dist/**"
   ],
-  "author": "Ryan Kennedy <r24y@users.noreply.github.com>",
+  "author": "Ryan Kennedy <ryaninvents@users.noreply.github.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -26,7 +26,7 @@
     "jest": "^22.4.0"
   },
   "dependencies": {
-    "@r24y/data-explorer-constants": "0.0.x",
+    "@ryaninvents/data-explorer-constants": "0.0.x",
     "json-hash": "^1.2.0"
   }
 }
