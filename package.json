@@ -8,10 +8,9 @@
   "dependencies": {
     "babel-generator": "^6.26.0",
     "babel-types": "^6.26.0",
-    "react": "^16.0.0",
+    "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-monaco-editor": "^0.10.1",
-    "react-scripts": "1.0.14"
+    "react-monaco-editor": "^0.10.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,6 +35,7 @@
     "eslint-config-react-app": "2.0.x",
     "gh-pages": "^1.1.0",
     "import-all.macro": "^2.0.3",
-    "lerna": "^2.9.0"
+    "lerna": "^2.9.0",
+    "react-scripts": "^3.4.1"
   }
 }
