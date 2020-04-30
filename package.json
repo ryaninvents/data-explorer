@@ -9,7 +9,7 @@
     "babel-generator": "^6.26.0",
     "babel-types": "^6.26.0",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react-dom": "^16.13.1",
     "react-monaco-editor": "^0.10.1",
     "react-scripts": "1.0.14"
   },
