@@ -10,6 +10,7 @@
   ],
   "dependencies": {},
   "scripts": {
+    "build": "yarn turbo run build",
     "release": "changeset publish"
   },
   "turbo": {
