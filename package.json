@@ -5,6 +5,9 @@
   "private": true,
   "license": "MIT",
   "homepage": "https://ryaninvents.github.io/data-explorer",
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {
     "babel-generator": "^6.26.0",
     "babel-types": "^6.26.0",
@@ -20,7 +23,6 @@
     "storybook": "start-storybook -c .storybook/dev -p 9009",
     "storybook:build": "build-storybook -c .storybook/prod -o dist/storybook",
     "deploy": "gh-pages -d dist",
-    "postinstall": "lerna bootstrap && lerna link --force-local",
     "publish:all": "npx travis-deploy-once 'lerna publish --skip-git --yes --conventional-commits --changelog-preset eslint'"
   },
   "devDependencies": {
@@ -35,7 +37,6 @@
     "eslint-config-react-app": "2.0.x",
     "gh-pages": "^1.1.0",
     "import-all.macro": "^2.0.3",
-    "lerna": "^2.9.0",
     "react-scripts": "^3.4.1"
   }
 }
