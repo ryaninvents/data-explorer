@@ -18,6 +18,7 @@ jobs:
         with:
           node-version: 16.x
       - run: yarn
+      - run: yarn build
       - name: Create publish PR
         id: changesets
         uses: changesets/action@v1

@@ -17,13 +17,19 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && lerna run build",
+    "build": "yarn turbo run build",
     "test": "react-scripts test --env=jsdom && lerna run test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -c .storybook/dev -p 9009",
     "storybook:build": "build-storybook -c .storybook/prod -o dist/storybook",
     "deploy": "gh-pages -d dist",
     "release": "changeset publish"
+  },
+  "turbo": {
+    "pipeline": {
+      "build": {},
+      "test": {}
+    }
   },
   "devDependencies": {
     "@changesets/cli": "^2.22.0",
@@ -38,6 +44,7 @@
     "eslint-config-react-app": "2.0.x",
     "gh-pages": "^1.1.0",
     "import-all.macro": "^2.0.3",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "turbo": "^1.2.12"
   }
 }
