@@ -6,7 +6,7 @@
   "repository": "https://github.com/ryaninvents/data-explorer/tree/develop/packages/explorer-bridge-json",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "test": "jest"
+    "test": "jest src/**/*.test.*"
   },
   "files": [
     "dist/**"
