@@ -11,5 +11,7 @@
   },
   "author": "Ryan Kennedy <ryaninvents@users.noreply.github.com>",
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  }
 }
