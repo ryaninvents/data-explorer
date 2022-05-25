@@ -23,7 +23,7 @@
     "storybook": "start-storybook -c .storybook/dev -p 9009",
     "storybook:build": "build-storybook -c .storybook/prod -o dist/storybook",
     "deploy": "gh-pages -d dist",
-    "publish:all": "npx travis-deploy-once 'lerna publish --skip-git --yes --conventional-commits --changelog-preset eslint'"
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.22.0",
