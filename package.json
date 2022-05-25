@@ -26,6 +26,7 @@
     "publish:all": "npx travis-deploy-once 'lerna publish --skip-git --yes --conventional-commits --changelog-preset eslint'"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.22.0",
     "@storybook/addon-knobs": "^3.3.14",
     "@storybook/react": "^3.2.19",
     "@types/babel-core": "6.25.x",
