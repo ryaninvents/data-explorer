@@ -11,7 +11,6 @@
   "engines": {
     "node": "16.x"
   },
-  "dependencies": {},
   "scripts": {
     "build": "yarn turbo run build",
     "release": "changeset publish"
@@ -29,5 +28,6 @@
     "@types/babylon": "6.16.x",
     "gh-pages": "^1.1.0",
     "turbo": "^1.2.12"
-  }
+  },
+  "packageManager": "yarn@3.3.1"
 }
