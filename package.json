@@ -8,6 +8,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {},
   "scripts": {
     "build": "yarn turbo run build",
