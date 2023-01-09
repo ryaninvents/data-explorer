@@ -1,6 +1,6 @@
 {
   "name": "@ryaninvents/data-explorer-constants",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.0",
   "description": "Common constants used in data-explorer",
   "main": "index.js",
   "scripts": {
